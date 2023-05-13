@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for i in range(97, 123):
-    if f"{i:c}" != "q" and f"{i:c}" != "e":
-        print(f"{i:c}", end='')
+    if "{0:c}".format(i) != "q" and "{0:c}".format(i) != "e":
+        print("{0:c}".format(i), end='')
