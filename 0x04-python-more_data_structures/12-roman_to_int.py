@@ -7,6 +7,7 @@ def roman_to_int(roman_string):
             'C': 100,
             'L': 50,
             'D': 500,
+            'M': 1000
             }
     if roman_string is None or type(roman_string) is not str:
         return 0
