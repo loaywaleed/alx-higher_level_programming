@@ -1,10 +1,20 @@
 #!/usr/bin/python3
-best_score = __import__('10-best_score').best_score
+""" Roman to Integer test file
+"""
+roman_to_int = __import__('12-roman_to_int').roman_to_int
 
-a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
-best_key = best_score(a_dictionary)
-print("Best score: {}".format(best_key))
+roman_number = "X"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-best_key = best_score(None)
-print("Best score: {}".format(best_key))
+roman_number = "VII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "IX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "LXXXVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
