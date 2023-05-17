@@ -14,9 +14,8 @@ def roman_to_int(roman_string):
     for i in range(len(roman_string)):
         for j in roman_dict:
             if j == roman_string[i]:
-                if roman_dict[j] > roman_dict[roman_string[i - 1]]: 
+                if i > 0 and roman_dict[j] > roman_dict[roman_string[i - 1]]:
                     after_conv = roman_dict[j] - after_conv
                 else:
                     after_conv += roman_dict[j]
     return after_conv
-
