@@ -4,7 +4,7 @@ def list_division(my_list_1, my_list_2, list_length):
     for el in range(list_length):
         try:
             new_el = my_list_1[el] / my_list_2[el]
-        except (TypeError, ValueError):
+        except (ValueError, TypeError):
             new_el = 0
             print("wrong type")
         except ZeroDivisionError:
