@@ -7,6 +7,7 @@ class Square:
     Attributes:
         __size (int): size of a side of the square
     """
+
     def __init__(self, size=0):
         """Initializes a square with private size
         Args:
@@ -22,9 +23,10 @@ class Square:
             raise TypeError("size must be an integer")
 
     def area(self):
-        """finds area of square
+        """Finds area of square
         Returns:
             Area of the square
         """
-        return self.__size * self.__size
+        result = self.__size * self.__size
+        return result
 
