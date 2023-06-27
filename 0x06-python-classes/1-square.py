@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Defines a class called Square
-"""
+""" Defines a class called Square """
 
-class Square():
+
+class Square:
     """ A square class
     Attributes:
         __size (int): size of a side of the square
