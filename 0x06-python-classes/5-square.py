@@ -53,6 +53,8 @@ class Square:
         Returns:
             None
         """
+        if self.size == 0:
+            print()
         for i in range(self.size):
             for j in range(self.size):
                 print('#', end='')
