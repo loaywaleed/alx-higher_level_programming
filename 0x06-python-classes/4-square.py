@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Defines a class called Square """
+"""Defines a class called Square"""
+
 
 class Square:
     """A square class
@@ -14,15 +15,15 @@ class Square:
             None
         """
         self.size = size
-    
+
     @property
     def size(self):
         """Gets the value of size
-        Returns: 
+        Returns:
             The size of square side
         """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """Sets the value of side size
@@ -37,7 +38,7 @@ class Square:
             else:
                 self.__size = value
         else:
-            raise TypeError("Size must be an integer")
+            raise TypeError("size must be an integer")
 
     def area(self):
         """Finds area of square
