@@ -2,6 +2,6 @@
 """ Defines a class called Square """
 
 
-Class Square():
+class Square():
     """ A square class """
     pass
