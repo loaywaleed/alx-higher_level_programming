@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 """
-
-Module that adds two integers a, b
-
+Python module
+adds two numbers
+returns result
 """
+
+
 def add_integer(a, b=98):
     """Adds two integers
     Args:
-        a, b: numbers to add"""
+        a, b: numbers to add
+    """
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
     if type(b) is not int and type(b) is not float:
