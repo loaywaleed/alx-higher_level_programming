@@ -1,0 +1,42 @@
+Importing module:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Checking for module docstring:
+	 >>> m = __import__("7-base_geometry").__doc__
+         >>> len(m) > 1
+         True
+
+Checking for class docstring:
+	 >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+         >>> len(c) > 1
+         True
+
+Checking for area's output:
+	>>> bg = BaseGeometry()
+	>>> bg.area()
+	Traceback(most recent call last):
+	...
+	Exception: area() is not implemented
+
+Checking for 0 case:
+	>>> bg.integer_validator("integer", 0)
+
+Checking for negative integer:
+	>>> bg.integer_validator("integer", -5)
+	Traceback (most recent call last):
+	...
+	ValueError: integer must be greater than 0
+
+Checking for no arguments to integer_validator:
+	>>> bg.integer_validator()
+	Traceback (most recent call last)
+	...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Checking for too many arguments:
+	 >>> b.integer_validator("integer", 1, 2)
+	 Traceback (most recent call last):
+         ...
+	 TypeError: integer_validator() takes 3 positional arguments but 4 were given
+	
