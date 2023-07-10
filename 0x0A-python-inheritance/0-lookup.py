@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""lookup function
-"""
+"""lookup function"""
+
+
 def lookup(obj):
     """Args:
         obj: takes in an object
