@@ -2,7 +2,7 @@
 """empty class module"""
 
 
-class base_geometry():
+class BaseGeometry():
     """empty class
     """
     pass
