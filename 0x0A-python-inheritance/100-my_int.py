@@ -2,7 +2,6 @@
 """MyInt class module"""
 
 
-
 class MyInt(int):
     """rebel version of an integer"""
     def __new__(cls, *args, **kwargs):
