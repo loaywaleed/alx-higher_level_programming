@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """BaseGeometry class and subclass Rectangle"""
 
-Rectangle = __import__('9-rectangle.py').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -15,3 +15,7 @@ class Square(Rectangle):
     def area(self):
         """returns area of square"""
         return self.__size * self.__size
+
+    def __str__(self):
+        """string of square"""
+        return "[Square], {:d}/{:d}".format(self.__size, self.__size)
