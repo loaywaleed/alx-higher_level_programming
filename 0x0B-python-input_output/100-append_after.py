@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Modules that inserts string with a file after a specified string is reached"""
+"""Modules that has a function that appends string"""
 
 
 def append_after(filename="", search_string="", new_string=""):
