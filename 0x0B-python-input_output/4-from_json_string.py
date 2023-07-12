@@ -7,4 +7,3 @@ import json
 def from_json_string(my_str):
     """function that converts json to object"""
     return json.loads(my_str)
-
