@@ -22,6 +22,6 @@ class Student:
         """replaces attributes of the student instance"""
         for el in json:
             try:
-                setattr(self, el, json[i])
+                setattr(self, el, json[el])
             except FileNotFoundError:
                 pass
