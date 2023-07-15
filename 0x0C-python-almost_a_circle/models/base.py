@@ -5,6 +5,7 @@
 class Base:
     """Base class for other subclasses"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """Instantiation of an object"""
         if id is not None:
