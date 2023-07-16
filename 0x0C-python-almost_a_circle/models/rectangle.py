@@ -77,16 +77,40 @@ class Rectangle(Base):
 
     def display(self):
         """Function that displays rectangle"""
-        for s_col in range(self.y):
-            print()
-        for col in range(self.height):
-            for s_row in range(self.x):
-                print(' ', end='')
-            for row in range(self.width):
-                print("#", end='')
-            print()
+        if self.width == 0 or self.height == 0:
+            print('')
+        else:
+            for s_col in range(self.y):
+                print()
+            for col in range(self.height):
+                for s_row in range(self.x):
+                    print(' ', end='')
+                for row in range(self.width):
+                    print("#", end='')
+                print()
 
     def __str__(self):
         """Overriding str method"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id, self.x, self.y, self.width, self.height)
+    
+    def update(self, *args, **kwargs):
+        """function that updates attributes"""
+        if args:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.width = args[1]
+            if len(args) > 2:
+                self.height = args[2]
+            if len(args) > 3:
+                self.x = args[3]
+            if len(args) > 4:
+                self.y = args[4]
+
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+
+
