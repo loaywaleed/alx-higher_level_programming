@@ -15,15 +15,15 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return self.__width
+        return self.width
     
     @size.setter
     def size(self, value):
-        self.__width = value
-        self.__height = value
-    
+        self.width = value
+        self.height = value
+
     def update(self, *args, **kwargs):
-        if args is not None and len(args) is not 0:
+        if args != None and len(args) is not 0:
             list_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 if list_atr[i] == 'size':
