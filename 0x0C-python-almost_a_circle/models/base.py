@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module that contains Base class"""
 
-import json
+import json, turtle
 
 
 class Base:
@@ -67,3 +67,37 @@ class Base:
                 return my_list
         except IOError:
             return []
+
+    def draw(list_rectangles, list_squares):
+        karina = turtle.Turtle()
+        karina.screen.bgcolor("#b7312c")
+        karina.pensize(3)
+        karina.shape("turtle")
+        karina.color("#BFD7ED")
+
+        for item in list_rectangles:
+            karina.showturtle()
+            karina.up()
+            karina.goto(item.x, item.y)
+            karina.down()
+            for i in range(2):
+                karina.forward(item.width)
+                karina.left(90)
+                karina.forward(item.height)
+                karina.left(90)
+                karina.hideturtle()
+
+        karina.color("#b5e3d8")
+        for sq_item in list_squares:
+            karina.showturtle()
+            karina.up()
+            karina.goto(sq_item.x, sq_item.y)
+            karina.down()
+            for i in range(2):
+                karina.forward(sq_item.width)
+                karina.left(90)
+                karina.forward(sq_item.height)
+                karina.left(90)
+            karina.hideturtle()
+
+        turtle.exitonclick()
