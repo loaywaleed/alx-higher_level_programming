@@ -17,12 +17,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Width getter"""
+        """width getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Width setter"""
+        """width setter"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -93,7 +93,7 @@ class Rectangle(Base):
         """Overriding str method"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id, self.x, self.y, self.width, self.height)
-    
+
     def update(self, *args, **kwargs):
         """function that updates attributes"""
         if args:
@@ -113,10 +113,11 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Method that shows rectangle dictionary"""
         return {
             "id": self.id,
             "width": self.width,
             "height": self.height,
             "x": self.x,
             "y": self.y
-        }        
+        }
