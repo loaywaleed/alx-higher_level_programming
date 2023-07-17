@@ -18,31 +18,35 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Method that converts objects to json strings"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Method that saves objs to file"""
         filename = "{}.json".format(cls.__name__)
         list_dic = []
         if list_objs:
             for obj in list_objs:
                 list_dic.append(obj.to_dictionary())
-        
+
         json_str = cls.to_json_string(list_dic)
         with open(filename, 'w', encoding="utf-8") as my_file:
             my_file.write(json_str)
 
     @staticmethod
     def from_json_string(json_string):
+        """Method that converts to objs from json"""
         if json_string:
             return json.loads(json_string)
         else:
             return []
-        
+
     @classmethod
     def create(cls, **dictionary):
+        """Method that creates an instance with specific attributes"""
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -52,6 +56,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """Method that loads from a file"""
         filename = f"{cls.__name__}.json"
         try:
             my_list = []
@@ -62,5 +67,3 @@ class Base:
                 return my_list
         except IOError:
             return []
-
-
