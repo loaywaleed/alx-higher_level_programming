@@ -69,6 +69,7 @@ class Base:
             return []
 
     def draw(list_rectangles, list_squares):
+        """Function that draws turtle"""
         karina = turtle.Turtle()
         karina.screen.bgcolor("#b7312c")
         karina.pensize(3)

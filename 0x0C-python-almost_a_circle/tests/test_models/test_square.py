@@ -4,7 +4,6 @@
 
 from unittest.mock import patch
 import unittest
-import json
 from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
