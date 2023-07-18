@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Module that contains Base class"""
 
-import json, turtle
+import json
+import turtle
 
 
 class Base:
