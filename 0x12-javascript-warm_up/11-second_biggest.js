@@ -10,7 +10,7 @@ if (args[2]) {
       secondMax = max;
       max = args[i];
     }
-    if (args[i] > secondMax && args[i] <= max) {
+    if (args[i] > secondMax && args[i] < max) {
       secondMax = args[i];
     }
   }
