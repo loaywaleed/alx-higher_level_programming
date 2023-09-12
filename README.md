@@ -1,1 +1,0 @@
-# ALX Higher Level Programming
