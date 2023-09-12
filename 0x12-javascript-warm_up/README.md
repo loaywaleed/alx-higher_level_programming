@@ -1,1 +1,1 @@
-# Javascript Warm-Up
+Javascript warm up
