@@ -15,9 +15,9 @@ if __name__ == '__main__':
                    WHERE states.name = %s\
                    ORDER BY cities.id ASC", [argv[4]])
 
-    states = cursor.fetchall()
-    for state in states:
-        print(state)
+    cities = cursor.fetchall()
+    for city in cities:
+        print(", ".join(city))
 
     cursor.close()
     db.close()
