@@ -1,23 +1,21 @@
 #!/usr/bin/node
-// status code of get request
+// obtaining number of tasks completed by users
 
 const request = require('request');
-const fs = require('fs');
 const url = process.argv[2];
 
-tasksByUser = {};
-let completedPerUser = Array(11).fill(0);
+const tasksByUser = {};
+const completedPerUser = Array(11).fill(0);
 
 request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   }
-  arrayOfTasks = JSON.parse(body);
+  const arrayOfTasks = JSON.parse(body);
   for (let i = 0; i < arrayOfTasks.length; i++) {
-
     for (let j = 0; j < 11; j++) {
-      if (arrayOfTasks[i].userId == j) {
-        if (arrayOfTasks[i].completed == true) {
+      if (arrayOfTasks[i].userId === j) {
+        if (arrayOfTasks[i].completed === true) {
           completedPerUser[j]++;
           tasksByUser[j] = completedPerUser[j];
         }
