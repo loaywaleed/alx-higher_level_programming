@@ -12,8 +12,10 @@ request(url, function (error, response, body) {
   }
   const allFilms = JSON.parse(body);
   for (let i = 0; i < allFilms.results.length; i++) {
-    if (allFilms.results[i].characters.includes(`https://swapi-api.alx-tools.com/api/people/${id}/`)) {
-      count++;
+    for (let j = 0; j < allFilms.results[i].characters.length; j++) {
+      if (allFilms.results[i].characters[j].includes(`${id}/`)) {
+        count++;
+      }
     }
   }
   console.log(count);
