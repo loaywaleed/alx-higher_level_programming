@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// status code of get request
+// counting number of movies that a character appeared in
 
 const request = require('request');
 const url = process.argv[2];

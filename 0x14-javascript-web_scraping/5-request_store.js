@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// status code of get request
+// requesting a page and storing it
 
 const request = require('request');
 const fs = require('fs');
