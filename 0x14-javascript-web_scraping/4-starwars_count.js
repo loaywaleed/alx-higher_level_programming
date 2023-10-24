@@ -2,9 +2,10 @@
 // status code of get request
 
 const request = require('request');
+const url = process.argv[2];
 let count = 0;
 
-request('https://swapi-api.alx-tools.com/api/films/', function (error, response, body) {
+request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   }
