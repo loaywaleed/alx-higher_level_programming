@@ -4,6 +4,7 @@
 const request = require('request');
 const url = process.argv[2];
 let count = 0;
+const id = 18;
 
 request(url, function (error, response, body) {
   if (error) {
@@ -11,7 +12,7 @@ request(url, function (error, response, body) {
   }
   const allFilms = JSON.parse(body);
   for (let i = 0; i < allFilms.results.length; i++) {
-    if (allFilms.results[i].characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+    if (allFilms.results[i].characters.includes(`https://swapi-api.alx-tools.com/api/people/${id}/`)) {
       count++;
     }
   }
