@@ -6,7 +6,7 @@ const url = process.argv[2];
 let count = 0;
 const id = 18;
 
-request(url, function (error, response, body) {
+request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   }
