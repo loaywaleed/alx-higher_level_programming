@@ -4,10 +4,6 @@
 const request = require('request');
 const argv = process.argv;
 
-request(argv[2], (error, respone) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('code: ', respone.statusCode);
-  }
+request.get(argv[2]).on('response', (response) => {
+  console.log("code: ", response.statusCode)
 });
